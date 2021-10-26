@@ -46,6 +46,7 @@ function start(){
     bees = new Array();
     //create bees
     makeBees();
+    updateBees();
     
 }
 
@@ -177,7 +178,7 @@ function updateBees() { //update loop for the game
     //move bees randomly
     moveBees();
     // use a fixed update period
-    let period = 10; // modify this to control refresh period
+    let period = document.getElementById("Timer"); // modify this to control refresh period
     // update timer for the next move
     updateTimer = setTimeout('updateBees()', period);
 
