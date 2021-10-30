@@ -1,49 +1,40 @@
-html{
-	background-color: #d0d0d0;
-}
-body{
-	margin: 10px;
-}
-h1{
-	padding-top: 0;
-	margin-top: 0;
-}
-#title{
-	padding: 10px;
-	background-color: palegoldenrod;
-	align-content: center;
-	align-self: center;
-}
-#scores{
-	padding: 15px 10px;
-	background-color: floralwhite;
-	align-self: center;
-	align-content: center;
-}
-#board{
-	position: absolute;
-	right: 10px;
-	left: 10px;
-	height: 600px;
-	background-color: paleturquoise;
-	align-content: center;
-	align-self: center;
-}
-.location {
-	color: rgb(121, 56, 121);
-}
-#hits {
-	color: rgb(214, 86, 86);
-	font-weight: 500;
-}
-#duration {
-	color: rgb(20, 69, 216);
-	font-weight: 500;
-}
 #bear {
     position: absolute;
-    /*left: 100px;*/
+    left: 100px;
     /*top: 240px;*/
     width: 100px;
     height: 160px
+}
+
+#board {
+    position: absolute;
+    height: 600px;
+    width: 1200px;
+    background-color: rgb(8, 104, 91);
+    align-content: center;
+    align-self: center;
+}
+
+#title {
+    background-color: rgb(128, 128, 128);
+    align-content: center;
+    align-self: center;
+}
+
+#scores {
+    background-color: rgb(247, 134, 241);
+    align-content: center;
+    align-self: center;
+}
+
+.location {
+    color: rgb(57, 144, 57);
+}
+
+#hits {
+    color: red;
+}
+
+#duration {
+    color: blue;
 }
