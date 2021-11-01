@@ -46,16 +46,12 @@ function start() {
 	lastStingTime = null;
 	if(!bees) {
 		bees = new Array(); // create new array for bees
-		makeBees();
 	} else {
-		for(let i = 1; i < bees.length; i++) {
-			bees.pop();
-		}
 		document.getElementById("nbBees").value = 2;
 	}
+	makeBees();
 	if(!bear) {
 		bear = new Bear(); // create bear
-		// Add an event listener to the keypress event
 	} else {
 		bear.x = "0";
 		bear.y = "0";
@@ -64,10 +60,9 @@ function start() {
 	document.getElementById("bearspeed").value = 100;
 	setSpeed();
 	updateBees();
+	// Add an event listener to the keypress event
 	document.addEventListener("keydown", moveBear, false);
-	//take start time
 
-	//lastStingTime = new Date();
 	document.addEventListener("keydown", () => {
 		if((!lastStingTime)||(lastStingTime==null))
 		lastStingTime = new Date();
@@ -197,11 +192,6 @@ function makeBees(){
 	}
 }
 
-function addBees() {
-	document.getElementById("nbBees").value = Number(document.getElementById("nbBees").value) + 2;
-	makeBees();
-}
-
 function moveBees(){
 	//get speed input field value
 	let speed = document.getElementById("speedBees").value;
@@ -226,12 +216,11 @@ function updateBees() {
 function isHit(defender, offender) {
 	if(overlap(defender, offender)) { // check if two images overlap
 		let score = document.getElementById("hits").innerHTML;
-		if(score=="1000") {
-			start();
-			window.alert("Game Over!");
-		}
 		score = Number(document.getElementById("hits").innerHTML) + 1; // increment score
 		document.getElementById("hits").innerHTML = score; // display new score
+		if(score=="1000") {
+			document.write("Game Over");
+		}
 		//calculate longest duration
 		let newStingTime = new Date();
 		let thisDuration = newStingTime - lastStingTime;
