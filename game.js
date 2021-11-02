@@ -255,7 +255,7 @@ function overlap(element1, element2) {
 	x_intersect = Math.max(0, Math.min(right1, right2) - Math.max(left1, left2));
 	y_intersect = Math.max(0, Math.min(bottom1, bottom2) - Math.max(top1, top2));
 	intersectArea = x_intersect * y_intersect;
-	// if intersection is nil => no hit
+	// if intersection is null => no hit
 	if(intersectArea == 0 || isNaN(intersectArea)) {
 		return false;
 	}
